@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="aawid"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-09-21 02:02:10 PM"/>
+        <attribute name="created" value="YWF3aWQ7REVTS1RPUC0zUElTMDdBOzIwMjAtMDktMjE7MDE6MTY6NDAgUE07MjgyOA=="/>
+        <attribute name="edited" value="YWF3aWQ7REVTS1RPUC0zUElTMDdBOzIwMjAtMDktMjE7MDI6MDI6MTAgUE07MTsyOTI5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="running" type="Boolean" array="False" size=""/>
+            <assign variable="running" expression="true"/>
+            <while expression="running">
+                <declare name="userInput" type="String" array="False" size=""/>
+                <output expression="&quot;Enter a temperature in degreed Celsius (blank to quit).&quot;" newline="True"/>
+                <input variable="userInput"/>
+                <if expression="Len(userInput) &gt; 0">
+                    <then>
+                        <declare name="celsius" type="Real" array="False" size=""/>
+                        <assign variable="celsius" expression="ToReal(userInput)"/>
+                        <output expression="celsiusToFahrenheit(celsius)" newline="True"/>
+                    </then>
+                    <else>
+                        <assign variable="running" expression="false"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+    <function name="celsiusToFahrenheit" type="Real" variable="fahrenheit">
+        <parameters>
+            <parameter name="celsius" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="fahrenheit" type="Real" array="False" size=""/>
+            <assign variable="fahrenheit" expression="celsius * 9 / 5 + 32"/>
+        </body>
+    </function>
+</flowgorithm>
