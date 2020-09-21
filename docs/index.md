@@ -18,6 +18,6 @@
 
 ## Flowgorithm
 
-* `Celsius to Fahrenheith Converter.fprg`
+* `Celsius to Fahrenheit Converter.fprg`
 
     Source flow chart for `edu.cnm.deepdive.InputConverter`
